@@ -6,7 +6,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import java.util.Date;
+import java.time.LocalDateTime;
+
 
 @Entity
 @Table(name = "addCarts")
@@ -16,6 +17,9 @@ public class AddCart {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "cartId")
 	private int cartId;
+	
+	@Column(name = "productId")
+	private int productId;
 	
 	@Column(name = "productName")
 	private String productName;
@@ -27,7 +31,7 @@ public class AddCart {
 	private int userId;
 	
 	@Column(name = "userName")
-	private int userName;
+	private String userName;
 	
 	@Column(name = "productDes")
 	private String productDes;
@@ -39,7 +43,7 @@ public class AddCart {
 	private int quantity;
 	
 	@Column(name = "createdAt")
-	private Date createdAt;
+	private LocalDateTime createdAt;
 
 	public int getCartId() {
 		return cartId;
@@ -97,13 +101,31 @@ public class AddCart {
 		this.quantity = quantity;
 	}
 
-	public Date getCreatedAt() {
+	public LocalDateTime getCreatedAt() {
 		return createdAt;
 	}
 
-	public void setCreatedAt(Date createdAt) {
-		this.createdAt = createdAt;
+	public void setCreatedAt(LocalDateTime localDateTime) {
+		this.createdAt = localDateTime;
 	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public int getProductId() {
+		return productId;
+	}
+
+	public void setProductId(int productId) {
+		this.productId = productId;
+	}
+	
+	
 	
 	
 	

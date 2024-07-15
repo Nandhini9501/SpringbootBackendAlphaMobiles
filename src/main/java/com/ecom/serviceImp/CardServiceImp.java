@@ -39,25 +39,6 @@ public class CardServiceImp implements CardService {
 		cardRepo.save(c);
 		return m.getOriginalFilename();
 	}
-	
-	
-//	@Override
-//	public String createCard(CardRequestDto reqDto, MultipartFile m) throws IOException {
-//		
-//		byte[] bytes = m.getBytes();
-//		String fileLoc = "E://SpringBoot/RegistrationProject/src/main/resources/Images/" + m.getOriginalFilename();
-//		Path path = Paths.get(fileLoc);
-//		Files.write(path, bytes);
-//		
-//		Card c = new Card();
-//		
-//		c.setCardTitle(reqDto.getCardTitle());
-//		c.setCardPrice(reqDto.getCardPrice());
-//		c.setCardImage(m.getOriginalFilename());
-//		
-//		cardRepo.save(c);
-//		return m.getOriginalFilename();
-//	}
 
 
 	@Override

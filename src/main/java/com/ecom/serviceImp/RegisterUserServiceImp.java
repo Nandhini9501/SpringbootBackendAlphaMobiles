@@ -71,6 +71,7 @@ public class RegisterUserServiceImp implements RegisterUserService {
 	    res.setRole(login.getRole());
 	    res.setEmail(login.getEmail());
 	    res.setPassword(login.getPassword());
+	    res.setId(login.getId());
 	   
 	    
 	    
