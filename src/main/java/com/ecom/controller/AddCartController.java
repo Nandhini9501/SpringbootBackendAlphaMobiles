@@ -59,5 +59,9 @@ public class AddCartController {
 		return "Product Removed Successfully";
 	}
 	
+	@PostMapping("/updateQuantity")
+    public String updateQuantity(@RequestParam int userId, @RequestParam int productId, @RequestParam int quantity) {
+        return addCartService.updateQuantity(userId, productId, quantity);
+    }
 	
 }

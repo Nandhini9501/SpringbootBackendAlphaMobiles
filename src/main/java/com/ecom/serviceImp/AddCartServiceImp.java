@@ -72,4 +72,17 @@ public class AddCartServiceImp implements AddCartService {
 	}
 	
 	
+	public String updateQuantity(int userId, int productId, int quantity) {
+        AddCart exCart = addCartRepo.findByUserIdAndProductId(userId, productId);
+        
+        if(exCart != null) {
+            exCart.setQuantity(quantity);
+//          exCart.setQuantity(exCart.getQuantity() + quantity);
+            addCartRepo.save(exCart);
+            return "Quantity updated successfully";
+        } else {
+            return "Item not found in cart";
+        }
+    }
+	
 }

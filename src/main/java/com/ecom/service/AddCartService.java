@@ -14,4 +14,6 @@ public interface AddCartService {
 	
 	boolean removeFromCart(int cartId);
 	
+	public String updateQuantity(int userId, int productId, int quantity);
+	
 }

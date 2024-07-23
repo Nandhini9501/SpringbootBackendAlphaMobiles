@@ -25,7 +25,7 @@ public class CardServiceImp implements CardService {
 	public String createCard(String ct, String cp, String cd, MultipartFile m) throws IOException {
 		
 		byte[] bytes = m.getBytes();
-		String fileLoc = "E://SpringBoot/EcomAlphaMobiles/src/main/resources/Images/" + m.getOriginalFilename();
+		String fileLoc = "E://Sample/EcomAlphaMobilesSpringboot/src/main/resources/images/" + m.getOriginalFilename();
 		Path path = Paths.get(fileLoc);
 		Files.write(path, bytes);
 		
@@ -97,7 +97,7 @@ public class CardServiceImp implements CardService {
 	@Override
 	public String imageUpload(MultipartFile m) throws IOException {
 		byte[] bytes = m.getBytes();
-		String fileLoc = "E://SpringBoot/EcomAlphaMobiles/src/main/resources/Images/" + m.getOriginalFilename();
+		String fileLoc = "E://Sample/EcomAlphaMobilesSpringboot/src/main/resources/images/" + m.getOriginalFilename();
 		Path path = Paths.get(fileLoc);
 		Files.write(path, bytes);
 		return m.getOriginalFilename();
